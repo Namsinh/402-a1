@@ -166,7 +166,7 @@ int *find_aa_aab(FILE *file) {
 			i++;
 			S1: if (c == 'a') {
 				found[n] = i;
-				n++;	
+				n++;
 				if ((c = getc(file)) == EOF)
 					break;
 				putchar(c);
@@ -176,7 +176,7 @@ int *find_aa_aab(FILE *file) {
 					n++;
 				}
 				else {
-					goto S1;	
+					goto S1;
 				}
 			}
 		}
@@ -194,7 +194,7 @@ int main() {
 	printf("(E) aa*aa?\n");
 	printf("(F) aa or aab?\n");
 	char answer = getc(stdin);
-	
+
 	char fname[12] = "tests/test1";
 	switch (answer) {
 		case 'A':
@@ -219,7 +219,7 @@ int main() {
 			printf("Invalid input\n");
 			break;
 	}
-	
+
 	FILE *file = fopen(fname, "r");
 
 	if (file == NULL) {
@@ -229,8 +229,33 @@ int main() {
 	else {
 		printf("File opened\n");
 	}
-	
-	int *found = find_a(file);
+
+	//int *found = find_a(file);
+	int *found;
+
+	switch (answer) {
+		case 'A':
+			found = find_a(file);
+			break;
+		case 'B':
+			found = find_ab(file);
+			break;
+		case 'C':
+			found = find_aa(file);
+			break;
+		case 'D':
+			found = find_abc(file);
+			break;
+		case 'E':
+			found = find_aa_aa(file);
+			break;
+		case 'F':
+			found = find_aa_aab(file);
+			break;
+		default :
+			printf("Invalid input\n");
+			break;
+	}
 
 	for (int i = 0; i < 10; i++) {
 		printf("%d, ", found[i]);

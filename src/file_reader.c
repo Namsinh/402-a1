@@ -195,25 +195,25 @@ int main() {
 	printf("(F) aa or aab?\n");
 	char answer = getc(stdin);
 
-	char fname[12] = "tests/test1";
+	char fname[15] = "../tests/test1";
 	switch (answer) {
 		case 'A':
-			strncpy(fname, "tests/test1", 12);
+			strncpy(fname, "../tests/test1", 15);
 			break;
 		case 'B':
-			strncpy(fname, "tests/test2", 12);
+			strncpy(fname, "../tests/test2", 15);
 			break;
 		case 'C':
-			strncpy(fname, "tests/test3", 12);
+			strncpy(fname, "../tests/test3", 15);
 			break;
 		case 'D':
-			strncpy(fname, "tests/test4", 12);
+			strncpy(fname, "../tests/test4", 15);
 			break;
 		case 'E':
-			strncpy(fname, "tests/test5", 12);
+			strncpy(fname, "../tests/test5", 15);
 			break;
 		case 'F':
-			strncpy(fname, "tests/test6", 12);
+			strncpy(fname, "../tests/test6", 15);
 			break;
 		default :
 			printf("Invalid input\n");

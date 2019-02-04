@@ -195,7 +195,7 @@ int main() {
 	printf("(F) aa or aab?\n");
 	char answer = getc(stdin);
 
-	char fname[15] = "../tests/test1";
+	char fname[15] = "";
 	switch (answer) {
 		case 'A':
 			strncpy(fname, "../tests/test1", 15);

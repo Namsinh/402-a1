@@ -12,7 +12,7 @@ This is a warm up exercise for compiler constructions. Source code is stored as 
 
 - To make things easier, don't think of a file as a sequence of lines, just as a sequence of characters. The end of line symbol can be treated as just another character.
 
-With this in mind write and test, for each of the questions, a program in Java or C/C++ or Python or Haskell which answers the following questions. Below, `*` is the usual wildcard that can stand for any number of any characters. If the answer to the question is yes the program should output a list of numbers containing the positions in the file where the last character of the sequence in question appears. 
+With this in mind write and test, for each of the questions, a program in Java or C/C++ or Python or Haskell which answers the following questions. Below, `*` is the usual wildcard that can stand for any number of any characters. If the answer to the question is yes the program should output a list of numbers containing the positions in the file where the last character of the sequence in question appears.
 
 - Does the file contain the character `a`? For example, if the file contains the characters `abaab` the output should be `[1,3,4]`. **(1 out of 10)**
 

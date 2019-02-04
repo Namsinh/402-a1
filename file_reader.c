@@ -232,7 +232,7 @@ int main() {
 	
 	int *found = find_a(file);
 
-	for (int i = 0; i < 25; i++) {
+	for (int i = 0; i < 10; i++) {
 		printf("%d, ", found[i]);
 	}
 	printf("\n");

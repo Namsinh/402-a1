@@ -203,7 +203,7 @@ int main() {
 		case 'B':
 			strncpy(fname, "tests/test2", 12);
 			break;
-		case 'c':
+		case 'C':
 			strncpy(fname, "tests/test3", 12);
 			break;
 		case 'D':

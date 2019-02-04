@@ -1,4 +1,4 @@
-# CPSC 404 Compiler Construction
+# CPSC 402 Compiler Construction
 
 ----
 ## Assignment 1

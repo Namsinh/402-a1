@@ -4,9 +4,8 @@
 
 int *find_a(FILE *file) {
 	static int found[10];
-	int n = 0;
-	int c;
-	int i = 0;
+	int n = 0, c = 0, i = 0;
+
 	while ((c = getc(file)) != EOF) {
 		i++;
 		putchar(c);
@@ -21,9 +20,7 @@ int *find_a(FILE *file) {
 
 int *find_ab(FILE *file) {
 	static int found[10];
-	int n = 0;
-	int c;
-	int i = 0;
+	int n = 0, c = 0, i = 0;
 
 	while ((c = getc(file)) != EOF) {
 		i++;
@@ -48,9 +45,7 @@ int *find_ab(FILE *file) {
 
 int *find_aa(FILE *file) {
 	static int found[10];
-	int n = 0;
-	int c;
-	int i = 0;
+	int n = 0, c = 0, i = 0;
 
 	while ((c = getc(file)) != EOF) {
 		i++;
@@ -73,9 +68,7 @@ int *find_aa(FILE *file) {
 
 int *find_abc(FILE *file) {
 	static int found[10];
-	int n = 0;
-	int c;
-	int i = 0;
+	int n = 0, c = 0, i = 0;
 
 	while ((c = getc(file)) != EOF) {
 		i++;
@@ -109,9 +102,7 @@ int *find_abc(FILE *file) {
 
 int *find_aa_aa(FILE *file) {
 	static int found[10];
-	int n = 0;
-	int c;
-	int i = 0;
+	int n = 0, c = 0, i = 0;
 
 	while ((c = getc(file)) != EOF) {
 		i++;
@@ -152,9 +143,7 @@ int *find_aa_aa(FILE *file) {
 
 int *find_aa_aab(FILE *file) {
 	static int found[10];
-	int n = 0;
-	int c;
-	int i = 0;
+	int n = 0, c = 0, i = 0;
 
 	while ((c = getc(file)) != EOF) {
 		i++;
@@ -193,8 +182,8 @@ int main() {
 	printf("(D) abc?\n");
 	printf("(E) aa*aa?\n");
 	printf("(F) aa or aab?\n");
-	char answer = getc(stdin);
 
+	char answer = getc(stdin);
 	char fname[15] = "";
 	switch (answer) {
 		case 'A':
@@ -221,7 +210,6 @@ int main() {
 	}
 
 	FILE *file = fopen(fname, "r");
-
 	if (file == NULL) {
 		printf("Can't open file :(\n");
 		exit(1);
@@ -230,9 +218,7 @@ int main() {
 		printf("File opened\n");
 	}
 
-	//int *found = find_a(file);
 	int *found;
-
 	switch (answer) {
 		case 'A':
 			found = find_a(file);
